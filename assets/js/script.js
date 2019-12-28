@@ -1,10 +1,11 @@
 $(document).ready(function () {
 
-//Updates the current date to the id currentDay ---------------------------------------    
+//---------------Updates the current date to the id currentDay -----------------------   
 var date = moment().format("dddd, MMMM Do YYYY");
 $("#currentDay").text(date); 
-//------------------------------------------------------------------------------------
-  
+
+
+//-----------------------Time-block Variables----------------------------------------- 
 var currentTime = moment().format("h");
 
 var hour9am = $("#hour9am").text();
@@ -27,7 +28,7 @@ var hour5pm = $("#hour5pm").text();
   hour5pm = hour5pm[0];
 
 
-
+//----------------------Conditionals for Styling----------------------------------------
 if ( hour9am > currentTime){
     $("#hour9 .description ").addClass("past");
   } else if( hour9am == currentTime){
@@ -100,6 +101,18 @@ if (hour5pm < currentTime){
   $("#hour17 .description ").addClass("future");  
 }
 
+//--------------------------------An Attempt at Storage----------------------------------
+$(function(){
+  var task = localStorage.getItem("task");
+  var textArea = $("textarea");
+  textArea.text(task);
 
+});
 
+$("button").on("click", function(event) {
+  event.preventDefault();
+  var task = $(".description").val();
+    localStorage.setItem("task", task);
+  });
+//--------------------------------------------------------------------------------------
 })
