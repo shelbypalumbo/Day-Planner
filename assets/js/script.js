@@ -103,16 +103,107 @@ if (hour5pm < currentTime){
 
 //--------------------------------An Attempt at Storage----------------------------------
 $(function(){
-  var task = localStorage.getItem("task");
-  var textArea = $("textarea");
+  var task = localStorage.getItem("task1");
+  var textArea = $(".9am");
+  textArea.text(task);
+});
+
+$(function(){
+  var task = localStorage.getItem("task2");
+  var textArea = $(".10am");
+  textArea.text(task);
+
+});
+$(function(){
+  var task = localStorage.getItem("task3");
+  var textArea = $(".11am");
+  textArea.text(task);
+
+});
+$(function(){
+  var task = localStorage.getItem("task4");
+  var textArea = $(".12am");
+  textArea.text(task);
+
+});
+$(function(){
+  var task = localStorage.getItem("task5");
+  var textArea = $(".1pm");
+  textArea.text(task);
+
+});
+$(function(){
+  var task = localStorage.getItem("task6");
+  var textArea = $(".2pm");
   textArea.text(task);
 
 });
 
+$(function(){
+  var task = localStorage.getItem("task7");
+  var textArea = $(".3pm");
+  textArea.text(task);
+
+});
+$(function(){
+  var task = localStorage.getItem("task8");
+  var textArea = $(".4pm");
+  textArea.text(task);
+
+});
+$(function(){
+  var task = localStorage.getItem("task9");
+  var textArea = $(".5pm");
+  textArea.text(task);
+
+});
+
+
 $("button").on("click", function(event) {
   event.preventDefault();
-  var task = $(".description").val();
-    localStorage.setItem("task", task);
+  var task = $(".9am").val();
+    localStorage.setItem("task1", task);
   });
+
+  $("button").on("click", function(event) {
+    event.preventDefault();
+    var task = $(".10am").val();
+      localStorage.setItem("task2", task);
+    });
+    $("button").on("click", function(event) {
+      event.preventDefault();
+      var task = $(".11am").val();
+        localStorage.setItem("task3", task);
+      });
+      $("button").on("click", function(event) {
+        event.preventDefault();
+        var task = $(".12am").val();
+          localStorage.setItem("task4", task);
+        });
+        $("button").on("click", function(event) {
+          event.preventDefault();
+          var task = $(".1pm").val();
+            localStorage.setItem("task5", task);
+          });
+          $("button").on("click", function(event) {
+            event.preventDefault();
+            var task = $(".2pm").val();
+              localStorage.setItem("task6", task);
+            });
+            $("button").on("click", function(event) {
+              event.preventDefault();
+              var task = $(".3pm").val();
+                localStorage.setItem("task7", task);
+              });
+              $("button").on("click", function(event) {
+                event.preventDefault();
+                var task = $(".4pm").val();
+                  localStorage.setItem("task8", task);
+                });
+                $("button").on("click", function(event) {
+                  event.preventDefault();
+                  var task = $(".5pm").val();
+                    localStorage.setItem("task9", task);
+                  });
 //--------------------------------------------------------------------------------------
 })
