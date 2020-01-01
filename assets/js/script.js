@@ -1,14 +1,18 @@
-$(document).ready(function () {
+$(document).ready(function() {
 
-//Updates the current date to the id currentDay ---------------------------------------    
+//Updates the current date to the id currentDay----------------------------------------    
 var date = moment().format("dddd, MMMM Do YYYY");
 $("#currentDay").text(date); 
-//------------------------------------------------------------------------------------
 
+//Current, start and end time variables------------------------------------------------
+var currentTime = moment().format("hh a");
+var endTime = moment("18", 'HH').format('hh a');
+var startTime = moment("09", 'HH').format('h a');
+//-------------------------------------------------------------------------------------
 
 var dayHrs = 18;
 
-for(var i = 9; i < dayHrs; i++){
+for( var i = 9; i < dayHrs; i++){
     var timeBlock = $("<div class='time-block row'>");
     var hour = $("<div class='hour col-1'>");
     var task = $("<textarea class='description col-10'>");
@@ -19,26 +23,22 @@ for(var i = 9; i < dayHrs; i++){
     hour.append(i + ":00");
 }
 
-
-var currentTime = moment().format("hh a");
-var endTime = moment("18:00", 'HH:mm').format('hh:mm a');
-var startTime = moment("09:00", 'HH:mm').format('h:mm a');
-
-console.log(currentTime);
-console.log(startTime);
-console.log(endTime);
-
-$(function(){
-    if(hour[0] > currentTime){
+$(function() {
+    if(hour < currentTime){
     $(".time-block").addClass("past");
     }
-    else if(currentTime == hour[0]){
+    else if(currentTime = hour){
     $(".time-block").addClass("present");
     }
-    else if(hour[0] < currentTime){
+    else if(hour > currentTime){
         $(".time-block").addClass("future");
         }
 });
 
+
+console.log(currentTime);
+console.log(startTime);
+console.log(endTime);
+console.log(e);
 
 })
