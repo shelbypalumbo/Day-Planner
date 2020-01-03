@@ -12,10 +12,10 @@ var dayHrs = 19;
 
 for( var i = 9; i < dayHrs; i++){
     var timeBlock = $("<div class='time-block row'>");
-    var hour = $("<div class='hour col-1'>");
-    var task = $("<textarea class='description col-10'>");
+    var hour = $("<div class='hour col-1' col-xs-2>");
+    var task = $("<textarea class='description col-10 col-xs-10''>");
     task.attr("data-task", i);
-    var save = $("<button class='saveBtn col-1'>").append("<i class='fas fa-save'>");
+    var save = $("<button class='saveBtn col-1 col-xs-12'>").append("<i class='fas fa-save'>");
     $(".container").append(timeBlock);
     timeBlock.append(hour, task, save);
     hour.append(i + ":00");
