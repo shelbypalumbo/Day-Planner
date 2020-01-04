@@ -8,18 +8,19 @@ $("#currentDay").text(date);
 var currentTime = moment().format("HH");
 //-------------------------------------------------------------------------------------
 
-var dayHrs = 19;
+var dayHrs = 18;
 
-for( var i = 9; i < dayHrs; i++){
+for( var i = 9; i < dayHrs; i++){ 
     var timeBlock = $("<div class='time-block row'>");
-    var hour = $("<div class='hour col-1' col-xs-2>");
-    var task = $("<textarea class='description col-10 col-xs-10''>");
+    var hour = $("<div class='hour col-1 col-xs-2'>");
+    var task = $("<textarea class='description col-10 col-xs-10'>");
     task.attr("data-task", i);
     var save = $("<button class='saveBtn col-1 col-xs-12'>").append("<i class='fas fa-save'>");
     $(".container").append(timeBlock);
     timeBlock.append(hour, task, save);
     hour.append(i + ":00");
 
+//Time of day conditions for what class is added to each time block
     if(currentTime > i){
       timeBlock.addClass("past");
       }
@@ -29,21 +30,22 @@ for( var i = 9; i < dayHrs; i++){
       else if(currentTime < i){
       timeBlock.addClass("future");
       }
-      //console.log(i);
-      //console.log(currentTime);
-};
+      else if(currentTime >= 19){
+      timeBlock.addClass("past");
+      }
+//Get local storage--------------------------------------------------------------------
+      var tasknum = "tasks" + i;
+      var tasklist = localStorage.getItem(tasknum);
+      task.val(tasklist);    
+}
 
-//Storage------------------------------------------------------------------------------
-$(function(){
-    var task = localStorage.getItem("task");
-    var textArea = $(".description");
-    textArea.text(task);
-    console.log(task);
-  });
-
-$("button").on("click", function(event) {
-    event.preventDefault();
-    var task = $("data-task", i);
-      localStorage.setItem("task", task);
-    });
+//Save text input on click to local storage--------------------------------------------
+      $(".saveBtn").on("click", function(){
+        var task = $(this).prev();
+        var tasks = task.val();
+        var tasknum = "tasks" + task.attr("data-task");
+        localStorage.setItem(tasknum, tasks);
+      })
 })
+
+
