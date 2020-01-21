@@ -33,9 +33,6 @@ for( var i = 9; i < dayHrs; i++){
       else if(currentTime >= 19){
       timeBlock.addClass("past");
       }
-      else if(currentTime >= 20){
-        task.val("");
-      }
 
 //Get local storage--------------------------------------------------------------------
       var tasknum = "tasks" + i;
