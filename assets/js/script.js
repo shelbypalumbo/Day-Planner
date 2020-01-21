@@ -34,16 +34,13 @@ for( var i = 9; i < dayHrs; i++){
       timeBlock.addClass("past");
       }
       else if(currentTime >= 20){
-        timeBlock.clear();
+        task.val("");
       }
-
-
-      
 
 //Get local storage--------------------------------------------------------------------
       var tasknum = "tasks" + i;
       var tasklist = localStorage.getItem(tasknum);
-      task.val(tasklist);    
+      task.val(tasklist);  
 }
 
 //Save text input on click to local storage--------------------------------------------
