@@ -1,14 +1,19 @@
 # Day-Planner
-<h2>Description</h2>
-This planner application is framed for the scheduling of an average work day, 9am to 5pm. 
-<h2>Usage</h2>
-This application allows you to write text to any hour block and save the text to your local storage for daily reference.
-<img src="dayplan.png" alt="dayplanner_view">
+https://shelbypalumbo.github.io/Day-Planner/
+
+## User Story
+As a student and full time employee, it is important to plan out my day, so that I 
+can reference my schedule and ensure that I do not miss a meeting, social events, or simply time alotted to household chores.
+
+## Usage
+This application allows a user to write text in to any hour block and save the text to your local storage for future reference.
+
+![Day Planner](dayplan.png)
+
 Background styling classes are added to each time block depending on the time of day. 
 As time passes, the hour past turns gray, the current hour block will turn red, and for all of the time blocks following the current hour, they will be green.
-<ul>
-<h3>Hourly Color Coding</h3>
-<li>Gray = The hour has passed</li>
-<li>Red = The currrent hour the user is in</li>
-<li>Green = The hours to come.</li>
-</ul>
+
+### Hourly Color Coding 
+* Gray = Passed
+* Red = Currrent hour 
+* Green = Future hour
