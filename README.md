@@ -13,6 +13,6 @@ Background styling classes are added to each time block depending on the time of
 As time passes, the hour past turns gray, the current hour block will turn red, and for all of the time blocks following the current hour, they will be green.
 
 ### Hourly Color Coding 
-* Gray = Passed
-* Red = Currrent hour 
-* Green = Future hour
+* Gray = Past Hour
+* Red = Currrent Hour 
+* Green = Future Hour
