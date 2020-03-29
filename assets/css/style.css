@@ -16,7 +16,7 @@ body {
   
   .jumbotron {
     text-align: center;
-    background-image: url("roses.jpg");
+    background-image: url("images/roses.jpg");
     opacity: 70%;
     background-size: cover;
     background-color: white;
