@@ -2,6 +2,7 @@ body {
     font-family: 'Open Sans', sans-serif;
     font-size: 16px;
     line-height: 1;
+    background-color: rgb(224, 240, 224);
   }
 
   textarea{
@@ -15,7 +16,11 @@ body {
   
   .jumbotron {
     text-align: center;
-    background-color: transparent;
+    background-image: url("roses.jpg");
+    opacity: 70%;
+    background-size: cover;
+    background-color: white;
+    background-repeat: no-repeat;
     color: black;
     border-radius: 0;
     border-bottom: 10px solid black;
@@ -33,27 +38,27 @@ body {
   .row {
     white-space: pre-wrap;
     height: 80px;
-    border-top: 1px solid white;;
+    border-top: 1px solid white;
   }
   
   .hour {
-    background-color: #ffffff;
+    background-color: #d5f3b3;
     color: #000000;
     border-top: 1px dashed #000000;
   }
   
   .past {
-    background-color: #d3d3d3;
+    background-color: #e4e4e4;
     color: white;
   }
   
   .present {
-    background-color: #ff6961;
+    background-color: #9b3172;
     color: white;
   }
   
   .future {
-    background-color: #77dd77;
+    background-color: #81c781;
     color: white;
   }
   
@@ -61,7 +66,7 @@ body {
     border-left: 1px solid black;
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
-    background-color: #06AED5;
+    background-color: rgb(59, 107, 179);
     color: white;
   }
   
